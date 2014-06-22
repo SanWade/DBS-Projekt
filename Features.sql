@@ -1,11 +1,11 @@
--- Tore
+--Tore
 Select neu.Name, sum(neu.Tore)
 From (
 SELECT V.Name, sum(S.Tore_Heim) as Tore 
 FROM Verein V,Spiel S
-WHERE (V.V_ID = S.Heim ) AND S.Datum IN (
-Select distinct Datum FROM Spiel
-Order by Datum desc 
+WHERE (V.V_ID = S.Heim ) AND S.Spieltag IN (
+Select distinct Spieltag FROM Spiel
+Order by Spieltag desc 
 FETCH FIRST 3 ROWS ONLY)
 Group By V.Name
 
@@ -13,17 +13,14 @@ Union all
 
 SELECT V.Name, sum(S.Tore_Gast) 
 FROM Verein V,Spiel S
-WHERE (V.V_ID = S.Gast ) AND S.Datum IN (
-
-Select distinct Datum FROM Spiel
-Order by Datum desc 
+WHERE (V.V_ID = S.Gast ) AND S.Spieltag IN (
+Select distinct Spieltag FROM Spiel
+Order by Spieltag desc 
 FETCH FIRST 3 ROWS ONLY)
-
 Group By V.Name
 
 ) neu
 Group by neu.Name
-
 
 -- Gegentore
 Select neu.Name, sum(neu.Tore)
