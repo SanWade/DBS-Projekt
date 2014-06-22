@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
  
  
-// susi mag kuchen sehr gerne
+
 public class Database
 {
   String     driver     = "org.postgresql.Driver";
