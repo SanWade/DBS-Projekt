@@ -1,0 +1,25 @@
+SELECT distinct min(Datum) FROM Spiel
+
+SELECT Spieler_ID
+FROM Spieler 
+WHERE Tore > 5
+
+Select  *
+FROM Spiel
+WHERE Datum in (Select min(Datum) from Spiel where Uhrzeit >17 )
+//Anmerkung: man kann min(datum) nur genau nach select oder in having verwenden , nicht in einer where klausel!
+
+SELECT S.Spieler_ID, S.Trikot_Nr , S.Land, S.Tore
+FROM Spieler S, Verein V
+WHERE S.Vereins_ID = V.V_ID AND  V.Name = "FC Bayern München"
+GROUP BY Trikot_Nr
+
+SELECT  count(V.Name)
+FROM   Verein V,Spiel S
+WHERE V.Name = "Hannover 96"
+AND (
+(V.V_ID = S.Heim AND Tore_Heim > Tore_Gast)
+OR
+(V.V_ID = S.Gast AND Tore_Gast > Tore_Heim)
+)
+
