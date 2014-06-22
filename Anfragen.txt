@@ -9,7 +9,7 @@ Select * FROM Spiel WHERE Datum in (Select min(Datum) from Spiel where Uhrzeit >
 SELECT S.Spieler_ID, S.Trikot_Nr , S.Land, S.Tore
 FROM Spieler S, Verein V
 WHERE S.Vereins_ID = V.V_ID AND  V.Name = "FC Bayern München"
-GROUP BY Trikot_Nr
+ORDER BY Trikot_Nr asc
 
 SELECT  count(V.Name)
 FROM   Verein V,Spiel S
