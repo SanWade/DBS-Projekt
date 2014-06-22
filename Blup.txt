@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Hallo Welt asdfasdf
 
 max war hier und labert Müll
@@ -5,3 +6,6 @@ max war hier und labert Müll
 git ist kompliziert!!! 
 
 Svenja ist jetzt auch hier und macht ihren murks dazu
+=======
+Hallo Svenja
+>>>>>>> origin/master
