@@ -4,10 +4,7 @@ SELECT Spieler_ID
 FROM Spieler 
 WHERE Tore > 5
 
-Select  *
-FROM Spiel
-WHERE Datum in (Select min(Datum) from Spiel where Uhrzeit >17 )
-//Anmerkung: man kann min(datum) nur genau nach select oder in having verwenden , nicht in einer where klausel!
+Select * FROM Spiel WHERE Datum in (Select min(Datum) from Spiel where Uhrzeit > '17:00:00' )
 
 SELECT S.Spieler_ID, S.Trikot_Nr , S.Land, S.Tore
 FROM Spieler S, Verein V
