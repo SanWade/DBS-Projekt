@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-    import java.awt.EventQueue;
-    import java.sql.Connection;
-    import java.sql.DriverManager;
-    import java.sql.ResultSet;
-    import java.sql.ResultSetMetaData;
-    import java.sql.SQLException;
-    import java.sql.Statement;
-     
-     
-     
-    public class Database
-=======
 import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,39 +32,12 @@ public class Database
  
  
  
-  /**
-   * Constructor
-   */
-  public Database ()
-  {
-    loadJdbcDriver ();
-    openConnection ();
-    showTimezones ();
-    closeConnection ();
-  }
  
  
  
  
  
-  /**
-   * close the connection
-   */
-  private void closeConnection ()
-  {
-    try
->>>>>>> origin/master
-    {
-      String     driver     = "org.postgresql.Driver"; 
-      String     host       = "localhost";
-      String     port       = "5432";     
-      String     database   = "postgres";              
-      String     user       = "postgres";                  
-      String     password   = "pit1234";    
-      
-      
-      Connection connection = null;
-     
+
       //* Constructor
       
       public Database ()
