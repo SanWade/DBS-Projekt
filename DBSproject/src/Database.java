@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     import java.awt.EventQueue;
     import java.sql.Connection;
     import java.sql.DriverManager;
@@ -9,6 +10,63 @@
      
      
     public class Database
+=======
+import java.awt.EventQueue;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+ 
+ 
+
+public class Database
+{
+  String     driver     = "org.postgresql.Driver";
+ 
+  // --------------------------------------------------------------------------
+ 
+  String     host       = "localhost";            // !!! anpassen !!!
+ 
+  String     port       = "5432";                 // !!! anpassen !!!
+ 
+  String     database   = "postgres";             // !!! anpassen !!!
+ 
+  String     user       = "postgres";                  // !!! anpassen !!!
+ 
+  String     password   = "PiT1234";                  // !!! anpassen !!!
+ 
+  // --------------------------------------------------------------------------
+ 
+  Connection connection = null;
+ 
+ 
+ 
+ 
+ 
+  /**
+   * Constructor
+   */
+  public Database ()
+  {
+    loadJdbcDriver ();
+    openConnection ();
+    showTimezones ();
+    closeConnection ();
+  }
+ 
+ 
+ 
+ 
+ 
+  /**
+   * close the connection
+   */
+  private void closeConnection ()
+  {
+    try
+>>>>>>> origin/master
     {
       String     driver     = "org.postgresql.Driver"; 
       String     host       = "localhost";

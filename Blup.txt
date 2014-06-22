@@ -1,1 +1,6 @@
 Schema klappt aber! kein chinesisch! sehr gut!
+
+
+weka und java
+http://ianma.wordpress.com/2010/01/16/weka-with-java-eclipse-getting-started/
+
